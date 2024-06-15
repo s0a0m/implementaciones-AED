@@ -5,12 +5,12 @@ typedef int item;
 
 typedef struct Nodo {
     item valor;
-    Nodo* siguiente;
-}Nodo;
+    struct Nodo* siguiente;
+} Nodo;
 
 typedef struct Nodo* Lista;
 
-Lista listaVacia ();
+void crearLista (Lista*);
 int esListaVacia (Lista); 
 void mostrar (Lista); 
 item primerElemento (Lista);

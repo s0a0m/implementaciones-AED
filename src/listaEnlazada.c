@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include "listaEnlazada.h"
+#include <stdlib.h>
+#include "../headers/listaEnlazada.h"
 
-Lista listaVacia () {
-    return NULL;
+void crearLista (Lista* lista) {
+    *lista = NULL;
 }
 
 int esListaVacia (Lista lista) {
@@ -11,7 +12,7 @@ int esListaVacia (Lista lista) {
 
 void mostrar (Lista lista) {
     Nodo* actual = lista;
-    printf("\tLISTA[]: ");
+    printf("\tLISTA");
     if (esListaVacia(lista)) printf(" => [NULL]");
     while (actual != NULL)
     {
@@ -21,17 +22,24 @@ void mostrar (Lista lista) {
 }
 
 item primerElemento (Lista lista) {
-    if (esListaVacia(lista)) return NULL;
+    if (esListaVacia(lista)) return -99999;
     return lista->valor;
 }
 
-// void insertar (Lista*,item) {
+void insertar (Lista* lista,item valor) {
+    Nodo* nuevoNodo = (Nodo*) malloc(sizeof(Nodo));
+    nuevoNodo->valor = valor;
+    nuevoNodo->siguiente = *lista;
+    *lista = nuevoNodo;
+}
 
-// }
-
-// void borrar (Lista*) {
-
-// }
+void borrar (Lista* lista) {
+    if (!esListaVacia(*lista)) {
+        Nodo* aux = *lista;
+        *lista = (*lista)->siguiente;
+        free(aux);
+    }
+}
 
 int longitud (Lista lista) {
     Nodo* actual = lista;
@@ -41,6 +49,7 @@ int longitud (Lista lista) {
         longitud++;
         actual = actual->siguiente;
     }
+    return longitud;
 }
 
 int pertenece (Lista lista,item valor) {
@@ -53,6 +62,33 @@ int pertenece (Lista lista,item valor) {
     return 0;
 }
 
-// void insertarK (Lista*,item,int) {
+void insertarK (Lista* lista,item valor,int k) {
 
-// }
+    Nodo* nuevoNodo = (Nodo*) malloc(sizeof(Nodo));
+    nuevoNodo->valor = valor;
+
+    if (esListaVacia(*lista) || k == 1) {
+        nuevoNodo->siguiente = *lista;
+        *lista = nuevoNodo;
+        return;
+    }
+
+    Nodo* actual = *lista;
+    Nodo* anterior = *lista;
+    int posicion = 0;
+    
+    while (actual != NULL && posicion < k - 1)
+    {
+        anterior = actual;
+        actual = actual->siguiente;
+        posicion++;
+    }
+
+    anterior->siguiente = nuevoNodo;
+    
+    if (actual == NULL) {
+        nuevoNodo->siguiente = NULL;
+    } else {
+        nuevoNodo->siguiente = actual;
+    }
+}
