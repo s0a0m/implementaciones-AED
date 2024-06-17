@@ -76,14 +76,21 @@ void insertarK (Lista* lista,item valor,int k) {
     Nodo* actual = *lista;
     Nodo* anterior = *lista;
     int posicion = 0;
-    
-    while (actual != NULL && posicion < k - 1)
-    {
-        anterior = actual;
-        actual = actual->siguiente;
-        posicion++;
-    }
 
+    if (k < 1) {
+        while (actual != NULL) {
+            anterior = actual;
+            actual = actual->siguiente;
+            posicion++;
+        }
+    } else {
+        while (actual != NULL && posicion < k - 1) {
+            anterior = actual;
+            actual = actual->siguiente;
+            posicion++;
+        }
+    }
+    
     anterior->siguiente = nuevoNodo;
     
     if (actual == NULL) {
