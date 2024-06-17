@@ -1,5 +1,14 @@
-## TIPIFICACION E IMPLEMENTACION DE LISTA ENLAZADA 
+# TIPIFICACION E IMPLEMENTACION DE LISTA ENLAZADA
 
-  - insertarK => bug cuando k toma valores negativos
+## COMPILAR Y EJECUTAR
 
-Test pasados => 15
+Este proyecto utiliza GCC con MinGW para compilar y ejecutar un programa en un entorno Windows.
+
+- **Compilar:** `mingw32-make`
+- **Ejecutar:** `Build\main.exe`
+- **Limpiar:** `mingw32-make clean` (Elimina el ejecutable)
+
+## TODO
+
+- Implementar `posicionK`
+
