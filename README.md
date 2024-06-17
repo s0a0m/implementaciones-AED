@@ -1,5 +1,3 @@
-# TIPIFICACION E IMPLEMENTACION DE LISTA ENLAZADA
-
 ## COMPILAR Y EJECUTAR
 
 Este proyecto utiliza GCC con MinGW para compilar y ejecutar un programa en un entorno Windows.
@@ -10,5 +8,4 @@ Este proyecto utiliza GCC con MinGW para compilar y ejecutar un programa en un e
 
 ## TODO
 
-- Implementar `posicionK`
-
+    - TP3-2024.c -> Implementar `estaContenida`

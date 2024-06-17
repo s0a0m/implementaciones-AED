@@ -1,3 +1,2 @@
-int main () {
-    return 0;
-}
+#include "./tps/TP3-2024.c"
+
