@@ -90,7 +90,7 @@ void insertarK (Lista* lista,item valor,int k) {
             posicion++;
         }
     }
-    
+
     anterior->siguiente = nuevoNodo;
     
     if (actual == NULL) {
