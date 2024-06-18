@@ -9,5 +9,3 @@ Este proyecto utiliza GCC con MinGW para compilar y ejecutar un programa en un e
 ## TODO
 
     - Implementar `esPalindromo y estaOrdenado` => TP3
-    - Implementar `moverAutos` => TP4
-    - Realizar los test de implementacion de ADT Cochera => TP4
