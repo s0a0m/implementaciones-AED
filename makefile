@@ -1,10 +1,10 @@
 CC = gcc
 TARGET = main.exe
 CFLAGS = -g -Wall
-SRC = main.c src/listaEnlazada.c
+SRC = src/cochera.c src/listaEnlazada.c
 
 all: ./Build
-	$(CC) $(CFLAGS) $(SRC) -o ./Build/$(TARGET)
+	$(CC) $(CFLAGS) tps/TP$(TP)-2024.c $(SRC) -o ./Build/$(TARGET)
 
 ./Build:
 	if not exist Build mkdir Build
