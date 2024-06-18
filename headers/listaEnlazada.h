@@ -1,5 +1,6 @@
+
+#ifndef LISTA_ENLAZADA_H
 #define LISTA_ENLAZADA_H
-#ifdef LISTA_ENLAZADA_H
 
 typedef int item;
 
