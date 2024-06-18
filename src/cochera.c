@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "../headers/cochera.h"
 
-int indefinido = -9999;
+int INDEFINIDO_COCHERA = -9999;
 
 void cocheraVacia(Cochera* cochera, int capacidadMaxima) {
     cochera->cabecera = NULL;
@@ -54,7 +54,7 @@ void salir(Cochera* cochera, int informacion) {
 }
 
 int ultimo(Cochera* cochera) {
-    if (cochera->cantidadAutos == 0) return  indefinido;
+    if (cochera->cantidadAutos == 0) return  INDEFINIDO_COCHERA;
     return cochera->cabecera->informacion;
 }
 

@@ -1,7 +1,7 @@
 #ifndef COCHERA_H
 #define COCHERA_H
 
-extern int indefinido;
+extern int INDEFINIDO_COCHERA;
 
 typedef struct Auto {
     int informacion;
