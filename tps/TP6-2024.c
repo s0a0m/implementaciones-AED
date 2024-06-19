@@ -4,7 +4,7 @@
 
 Fila* mezclar(Fila* fila1, Fila* fila2);
 
-void mostrarFila(Fila* fila) {
+static void mostar(Fila* fila) {
     Nodo* aux = fila->frente;
     printf("\n\tFRENTE");
     while (aux != NULL)
@@ -81,12 +81,12 @@ int main() {
     enfila(&fila2, 6);
     // Mostrar contenido de fila1
     printf("Contenido de fila1:\n");
-    mostrarFila(&fila1);
+    mostar(&fila1);
     printf("\n");
 
     // Mostrar contenido de fila2
     printf("Contenido de fila2:\n");
-    mostrarFila(&fila2);
+    mostar(&fila2);
     printf("\n");
 
     // Mezclar filas
@@ -94,7 +94,7 @@ int main() {
 
     // Mostrar contenido de filaMezclada
     printf("Contenido de filaMezclada:\n");
-    mostrarFila(filaMezclada);
+    mostar(filaMezclada);
     printf("\n");
 
     // Liberar memoria

@@ -6,7 +6,7 @@ int estaContenida(Lista*, Lista*);
 int ordenInverso(int);
 int digitoMayorIterativa(int);
 int digitoMayorRecursiva(int);
-int esPalindromo(char*);
+int contienePalindromo(char*);
 int estaOrdenado(int*);
 
 
@@ -85,7 +85,7 @@ int digitoMayorRecursiva(int numero) {
     }
 }
 
-// int esPalindromo(char* palabra) {
+// int contienePalindromo(char* palabra) {
 //     return 0;   
 // }
 
